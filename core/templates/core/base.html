@@ -8,11 +8,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio | La Caffettiera</title>
+    <title>{% block title %}{% endblock %} | La Caffettiera</title>
+
     {% load static %}
+
     <!-- Bootstrap -->
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
 
     <!-- Fuentes -->
     <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
@@ -63,7 +64,6 @@
       </div>
     </nav>
 
-    <!-- Contenido -->
     {% block content %} {% endblock %}
 
     <!-- Pié de página -->
