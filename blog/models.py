@@ -32,7 +32,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, 
         verbose_name="Autor")
     categories = models.ManyToManyField(Category, 
-        verbose_name="Categorías")
+        verbose_name="Categorías", related_name="get_posts")
     created = models.DateTimeField(auto_now_add=True, 
         verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, 
