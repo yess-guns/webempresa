@@ -3,6 +3,12 @@ from .models import Link
 # Register your models here.
 
 class LinkAdmin(admin.ModelAdmin):
-    pass
+    readonly_fields = ('created', 'updated')
 
-admin.site.register(Link, LinkAdmin)  
+    def get_reandoly_fields(self, request, obj=None):
+        if request.user.groups.filter(name="Personal").exits():
+            return ('key', 'name')
+        else:
+            return('created', 'updated')
+
+admin.site.register(Link, LinkAdmin)
