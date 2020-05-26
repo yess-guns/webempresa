@@ -18,7 +18,7 @@ def contact(request):
                 "La Caffetíera: Nuevo mensaje de contacto",
                 "De {} <{}>\n\nEscribió:\n\n{}".format(name, email, content),
                 "no-contestar@inbox.mailtrap.io",
-                ["casta_654@Outlook.com"],
+                ["yessy12384@gmail.com.com"],
                 reply_to=[email]
             )
 
